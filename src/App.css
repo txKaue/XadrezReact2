@@ -1,0 +1,79 @@
+.theme-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 100; /* Garante que o botão fique acima dos outros elementos */
+}
+
+.theme-switcher:hover {
+  background-color: var(--button-hover-background);
+}
+
+
+/* Estilização para o Board */
+.board-container {
+  display: flex;
+  justify-content: center; /* Centraliza o tabuleiro horizontalmente */
+  position: relative; /* Adiciona contexto para o z-index */
+  margin-left: 300px; /* Adiciona margem para a largura do sidebar */
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--sidebar-border); /* Usa a variável de cor da borda */
+  background-color: var(--background-color); /* Cor de fundo do tabuleiro */
+  z-index: 5; /* Garante que o tabuleiro esteja acima do conteúdo abaixo */
+  margin: auto; /* Centraliza o tabuleiro verticalmente dentro do container */
+}
+
+/* Outros estilos do App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color); /* Fundo do body para se ajustar ao tema */
+}
+
+/* Definição de cores padrão */
+:root {
+  --light-square-color: #f0d9b5; /* Cor clara dos quadrados do tabuleiro */
+  --dark-square-color: #6f98be; /* Cor escura dos quadrados do tabuleiro */
+  --selected-square-color: rgba(
+    255,
+    255,
+    0,
+    0.5
+  ); /* Cor para casa selecionada */
+  --possible-move-color: rgba(
+    0,
+    255,
+    0,
+    0.5
+  ); /* Cor para casas possíveis de movimento */
+  --sidebar-background: #3b2a1f; /* Cor de fundo da barra lateral */
+  --sidebar-border: #6a4f2f; /* Cor da borda da barra lateral */
+  --background-color: #d8cfc4; /* Cor de fundo padrão */
+}
+
+/* Definição de cores daltônicas */
+[data-theme="highContrast"] {
+  --light-square-color: #00fff2; /* Cor clara dos quadrados do tabuleiro para daltônicos */
+  --dark-square-color: #c5c5c5; /* Cor escura dos quadrados do tabuleiro para daltônicos */
+  --selected-square-color: rgb(255, 183, 183); /* Cor para casa selecionada para daltônicos */
+  --possible-move-color: rgba(
+    255,
+    0,
+    255,
+    0.5
+  ); /* Cor para casas possíveis de movimento para daltônicos */
+  --sidebar-background: rgba(0, 201, 201, 0.5); /* Cor de fundo da barra lateral para daltônicos */
+  --sidebar-border: #4f3b2f; /* Cor da borda da barra lateral para daltônicos */
+  --background-color: #d8cfc4; /* Cor de fundo daltônica */
+}

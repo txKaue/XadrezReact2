@@ -1,0 +1,48 @@
+.board-container {
+  display: flex;
+  justify-content: center; /* Centraliza o tabuleiro dentro do container */
+  padding: 0;
+  margin: 30px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--sidebar-border); /* Usar a variável definida para borda */
+  background-color: var(--light-square-color); /* Cor de fundo do tabuleiro usando a variável */
+  max-width: 80%; /* Limita a largura máxima do tabuleiro */
+  width: 700px; /* Largura fixa do tabuleiro */
+  box-sizing: border-box; /* Inclui a borda e o padding no tamanho total */
+}
+
+.board-row {
+  display: flex;
+  width: 100%; /* Garante que cada linha ocupe 100% da largura do tabuleiro */
+}
+
+.square {
+  flex: 1; /* Cada quadrado ocupa uma parte igual da linha */
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-sizing: border-box;
+  border: 1px solid var(--sidebar-border); /* Usar a variável definida para a borda dos quadrados */
+}
+
+.square.light {
+  background-color: var(--light-square-color); /* Cor clara usando a variável */
+}
+
+.square.dark {
+  background-color: var(--dark-square-color); /* Cor escura usando a variável */
+}
+
+.square.selected {
+  background-color: var(--selected-square-color); /* Cor para a casa selecionada usando a variável */
+}
+
+.square.possible-move {
+  background-color: var(--possible-move-color); /* Cor para casas possíveis de movimento usando a variável */
+}

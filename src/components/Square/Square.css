@@ -1,0 +1,28 @@
+:root {
+  --piece-white-color: #000; /* Cor das peças brancas */
+  --piece-black-color: #fff; /* Cor das peças negras */
+  --piece-font-size: 24px; /* Tamanho da fonte das peças */
+}
+
+.square-piece {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: var(--piece-font-size); /* Usar variável para o tamanho da fonte */
+}
+
+.square-piece.white {
+  color: var(--piece-white-color); /* Usar variável para cor das peças brancas */
+}
+
+.square-piece.black {
+  color: var(--piece-black-color); /* Usar variável para cor das peças negras */
+}
+
+/* Ajustes para o modo daltônico */
+[data-theme="daltonic"] {
+  --piece-white-color: #e0d4b9; /* Cor ajustada para peças brancas no modo daltônico */
+  --piece-black-color: #6b4f3b; /* Cor ajustada para peças pretas no modo daltônico */
+}

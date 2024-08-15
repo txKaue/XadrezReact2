@@ -1,0 +1,28 @@
+:root {
+  --piece-white-color: #fff; /* Cor das peças brancas */
+  --piece-black-color: #000; /* Cor das peças pretas */
+  --piece-shadow: 0 0 1px black, 1px 1px 2px black, 2px 2px 3px black; /* Sombra das peças */
+}
+
+.piece {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piece.white {
+  color: var(--piece-white-color); /* Usar a variável para cor das peças brancas */
+  text-shadow: var(--piece-shadow); /* Usar a variável para sombra das peças */
+}
+
+.piece.black {
+  color: var(--piece-black-color); /* Usar a variável para cor das peças pretas */
+}
+
+/* Ajustes para o modo daltônico */
+[data-theme="daltonic"] {
+  --piece-white-color: #e0d4b9; /* Cor ajustada para peças brancas no modo daltônico */
+  --piece-black-color: #6b4f3b; /* Cor ajustada para peças pretas no modo daltônico */
+  --piece-shadow: 0 0 1px #4a3b2a, 1px 1px 2px #4a3b2a, 2px 2px 3px #4a3b2a; /* Sombra ajustada para melhor contraste */
+}
